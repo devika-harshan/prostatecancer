@@ -26,16 +26,15 @@ def predict():
         area = float(request.form['area'])
         smooth = float(request.form['smoothness'])
         compact = float(request.form['compactness'])
-        frac = float(request.form['fractional_dimension'])
+        symme= float(request.form['symmetry'])
+        frac = float(request.form['fractal_dimension'])
 
-        data = np.array([[rad, tex, par, area, smooth, compact, frac]])
-        my_prediction = model.predict(data)
+        mypred = np.array([[rad, tex, par, area, smooth, compact,symme, frac]])
+        my_prediction = model.predict(mypred)
 
         return render_template('cancerresult.html', prediction=my_prediction)
 
   
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)
