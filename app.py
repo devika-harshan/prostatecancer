@@ -33,22 +33,7 @@ def predict():
 
         return render_template('cancerresult.html', prediction=my_prediction)
 
-    # input_features = [int(x) for x in request.form.values()]
-    # features_value = [np.array(input_features)]
-    # features_name = ['radius', 'texture', 'perimeter', 'area',
-    #                  'smoothness', 'compactness', 'symmetry', 'fractal_dimension']
-
-                     
-    # df = pd.DataFrame(features_value, columns=features_name)
-    # output = model.predict(df)
-    # if output == 4:
-    #     res_val = "a high risk of Prostrate Cancer"
-    # else:
-    #     res_val = "a low risk of Prostrate Cancer"
-
-    # return render_template('cancer_result.html', prediction_text='Patient has {}'.format(res_val))
-
-
+  
 
 
 
